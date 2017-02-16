@@ -1,16 +1,97 @@
-<?php foreach ($birthdays as $birthday) { ?>
-    <tr>
-        <td><?= $birthday['id']; ?></td>
-        <td><?= $birthday['person']; ?></td>
-        <td><?= $birthday['day']; ?></td>
-        <td><?= $birthday['month']; ?></td>
-        <td><?= $birthday['year']; ?></td>
-    </tr>
-    <?php } ?>
+<?php
+$januari = false;
+$februari = false;
+$maart = false;
+$april = false;
+$mei = false;
+$juni = false;
+$juli = false;
+$augustus = false;
+$september = false;
+$oktober = false;
+$november = false;
+$december = false;
+
+foreach ($birthdays as $birthday) {
+
+    if($birthday['month'] == 1){ 
+        $januari = true;
+    }
+    if($birthday['month'] == 2){ 
+        $februari = true;
+    }
+    if($birthday['month'] == 3){ 
+        $maart = true;
+    }
+    if($birthday['month'] == 4){ 
+        $april = true;
+    }
+    if($birthday['month'] == 5){ 
+        $mei = true;
+    }
+    if($birthday['month'] == 6){ 
+        $juni = true;
+    }
+    if($birthday['month'] == 7){ 
+        $juli = true;
+    }
+    if($birthday['month'] == 8){ 
+        $augustus = true;
+    }
+    if($birthday['month'] == 9){ 
+        $september = true;
+    }
+    if($birthday['month'] == 10){ 
+        $oktober = true;
+    }
+    if($birthday['month'] == 11){ 
+        $november = true;
+    }
+    if($birthday['month'] == 12){ 
+        $december = true;
+    }
+}
+
+    if($januari == ture){ 
+        echo "<h1>januari</h1>";
+    }
+     if($februari == ture){ 
+        echo "<h1>februari</h1>";
+    }
+     if($maart == ture){ 
+        echo "<h1>maart</h1>";
+    }
+     if($april == ture){ 
+        echo "<h1>april</h1>";
+    }
+     if($mei == ture){ 
+        echo "<h1>mei</h1>";
+    }
+     if($juni == ture){ 
+        echo "<h1>juni</h1>";
+    }
+     if($juli == ture){ 
+        echo "<h1>juli</h1>";
+    }
+     if($augustus == ture){ 
+        echo "<h1>augustus</h1>";
+    }
+     if($september == ture){ 
+        echo "<h1>september</h1>";
+    }
+     if($oktober == ture){ 
+        echo "<h1>oktober</h1>";
+    }
+     if($november == ture){ 
+        echo "<h1>november</h1>";
+    }
+     if($december == ture){ 
+        echo "<h1>december</h1>";
+    } ?>
 
 
 
-<h1>februari</h1>
+
 <h2>22</h2>
 <p>
     <a href="edit.php?id=4">
