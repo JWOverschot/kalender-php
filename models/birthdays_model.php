@@ -4,7 +4,7 @@ function getBirthday($id) {
 }
 function getAllBirthdays() {
 	$db = openDatabaseConnection();
-	$sql = "SELECT month FROM birthdays ORDER BY month ASC";
+	$sql = "SELECT * FROM birthdays ORDER BY month ASC, day DESC";
 	$query = $db->prepare($sql);
 	$query->execute();
 	$db = null;

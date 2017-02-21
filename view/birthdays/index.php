@@ -11,48 +11,32 @@ $september = false;
 $oktober = false;
 $november = false;
 $december = false;
+$months = array("null", "$januari", "$februari", "$maart", "$april", "$mei", "$juni", "$juli", "$augustus", "$september", "$oktober", "$november", "$december");
+$monthsName = array("null", "januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december");
+$arrlength = count($months);
+$days = array();
+
 
 foreach ($birthdays as $birthday) {
-
-    if($birthday['month'] == 1){ 
-        $januari = true;
+    for ($i=1; $i < $arrlength; $i++) { 
+        if($birthday['month'] == $i){
+            $months[$i] = true;
+        }
     }
-    if($birthday['month'] == 2){ 
-        $februari = true;
-    }
-    if($birthday['month'] == 3){ 
-        $maart = true;
-    }
-    if($birthday['month'] == 4){ 
-        $april = true;
-    }
-    if($birthday['month'] == 5){ 
-        $mei = true;
-    }
-    if($birthday['month'] == 6){ 
-        $juni = true;
-    }
-    if($birthday['month'] == 7){ 
-        $juli = true;
-    }
-    if($birthday['month'] == 8){ 
-        $augustus = true;
-    }
-    if($birthday['month'] == 9){ 
-        $september = true;
-    }
-    if($birthday['month'] == 10){ 
-        $oktober = true;
-    }
-    if($birthday['month'] == 11){ 
-        $november = true;
-    }
-    if($birthday['month'] == 12){ 
-        $december = true;
+    array_push($days, $birthday['day']);
+}
+$arrlengthDays = count($days);
+for ($i=1; $i < $arrlength; $i++) {
+    if ($months[$i] == true){
+        echo "<h1>" . $monthsName[$i] . "</h1>";
+        for ($a=0; $a < $arrlengthDays; $a++) { 
+            echo "<h2>" . $days[$a] . "</h2>";
+        }
     }
 }
 
-    if($januari == ture){ 
+
+    /*if($januari == ture){ 
         echo "<h1>januari</h1>";
     }
      if($februari == ture){ 
@@ -87,11 +71,12 @@ foreach ($birthdays as $birthday) {
     }
      if($december == ture){ 
         echo "<h1>december</h1>";
-    } ?>
+    } */
+?>
 
 
-
-
+<br>
+<h1>februari</h1>
 <h2>22</h2>
 <p>
     <a href="edit.php?id=4">
