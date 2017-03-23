@@ -1,5 +1,4 @@
 <?php
-    date_default_timezone_set('Europe/Amsterdam');
     setlocale(LC_TIME, 'Dutch_Netherlands', 'Dutch', 'nl_NL', 'nl', 'nl_NL.ISO8859-1', 'nl_NL.UTF-8', 'nld_nld', 'nld', 'nld_NLD', 'NL_nl');
     foreach ($birthdays as $birthday) {
     $monthNum  = $birthday['birthday_month'];
