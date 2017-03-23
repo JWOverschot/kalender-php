@@ -1,21 +1,19 @@
 <?php
-
 function getBirthday($id) {
 }
 function getAllBirthdays() {
 	$db = openDatabaseConnection();
-	$sql = "SELECT * FROM birthdays ORDER BY month ASC, day DESC";
+	$sql = "SELECT * FROM birthdays ORDER BY birthday_month, birthday_day ASC";
 	$query = $db->prepare($sql);
-	$query->execute();
+		$query->execute();
 	$db = null;
-
 
 	return $query->fetchAll();
 }
 function editBirthday() {
 }
-function deleteBirthday() {
+function deleteBirthday($id) {
 }
 function createBirthday() {
-}
 
+}
