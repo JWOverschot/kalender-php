@@ -1,80 +1,17 @@
 <?php
-$januari = false;
-$februari = false;
-$maart = false;
-$april = false;
-$mei = false;
-$juni = false;
-$juli = false;
-$augustus = false;
-$september = false;
-$oktober = false;
-$november = false;
-$december = false;
-$months = array("null", "$januari", "$februari", "$maart", "$april", "$mei", "$juni", "$juli", "$augustus", "$september", "$oktober", "$november", "$december");
-$monthsName = array("null", "januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december");
-$arrlength = count($months);
-$days = array();
-
-
-foreach ($birthdays as $birthday) {
-    for ($i=1; $i < $arrlength; $i++) { 
-        if($birthday['month'] == $i){
-            $months[$i] = true;
-        }
-    }
-    array_push($days, $birthday['day']);
-}
-$arrlengthDays = count($days);
-for ($i=1; $i < $arrlength; $i++) {
-    if ($months[$i] == true){
-        echo "<h1>" . $monthsName[$i] . "</h1>";
-        for ($a=0; $a < $arrlengthDays; $a++) { 
-            echo "<h2>" . $days[$a] . "</h2>";
-        }
-    }
-}
-
-
-    /*if($januari == ture){ 
-        echo "<h1>januari</h1>";
-    }
-     if($februari == ture){ 
-        echo "<h1>februari</h1>";
-    }
-     if($maart == ture){ 
-        echo "<h1>maart</h1>";
-    }
-     if($april == ture){ 
-        echo "<h1>april</h1>";
-    }
-     if($mei == ture){ 
-        echo "<h1>mei</h1>";
-    }
-     if($juni == ture){ 
-        echo "<h1>juni</h1>";
-    }
-     if($juli == ture){ 
-        echo "<h1>juli</h1>";
-    }
-     if($augustus == ture){ 
-        echo "<h1>augustus</h1>";
-    }
-     if($september == ture){ 
-        echo "<h1>september</h1>";
-    }
-     if($oktober == ture){ 
-        echo "<h1>oktober</h1>";
-    }
-     if($november == ture){ 
-        echo "<h1>november</h1>";
-    }
-     if($december == ture){ 
-        echo "<h1>december</h1>";
-    } */
+    date_default_timezone_set('Europe/Amsterdam');
+    setlocale(LC_TIME, 'Dutch_Netherlands', 'Dutch', 'nl_NL', 'nl', 'nl_NL.ISO8859-1', 'nl_NL.UTF-8', 'nld_nld', 'nld', 'nld_NLD', 'NL_nl');
+    foreach ($birthdays as $birthday) {
+    $monthNum  = $birthday['birthday_month'];
+    $monthName = strftime("%B", mktime(0, 0, 0, $monthNum));
 ?>
+    <h1><?= $monthName ?></h1>
+    <h2><?= $birthday['birthday_day']; ?></h2>
+    <p><?= $birthday['birthday_person']; ?></p>
+    <p>(<?= $birthday['birthday_year']; ?>)</p>
+<?php } ?>
 
-
+<div style="background-color: green;">
 <br>
 <h1>februari</h1>
 <h2>22</h2>
@@ -209,4 +146,4 @@ for ($i=1; $i < $arrlength; $i++) {
     <a href="delete.php?id=11">x</a>
 </p>
 
-<p><a href="create.php">+ Toevoegen</a></p>
+<p><a href="create.php">+ Toevoegen</a></p></div>
