@@ -6,11 +6,10 @@
 ?>
     <h1><?= $monthName ?></h1>
     <h2><?= $birthday['birthday_day']; ?></h2>
-    <p><?= $birthday['birthday_person']; ?></p>
-    <p>(<?= $birthday['birthday_year']; ?>)</p>
+    <p><?= $birthday['birthday_person']; ?> (<?= $birthday['birthday_year']; ?>)</p>
 <?php } ?>
 
-<div style="background-color: green;">
+<div style="background-color: olive;">
 <br>
 <h1>februari</h1>
 <h2>22</h2>
