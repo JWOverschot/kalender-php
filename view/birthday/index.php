@@ -6,8 +6,14 @@
 ?>
     <h1><?= $monthName ?></h1>
     <h2><?= $birthday['birthday_day']; ?></h2>
-    <p><?= $birthday['birthday_person']; ?> (<?= $birthday['birthday_year']; ?>)</p>
+    <p>
+        <a><?= $birthday['birthday_person']; ?> (<?= $birthday['birthday_year']; ?>)</a>
+        <a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">x</a>
+    </p>
 <?php } ?>
+<p><a href="<?= URL ?>birthday/create">+ Toevoegen</a></p></div>
+
+
 
 <div style="background-color: olive;">
 <br>
