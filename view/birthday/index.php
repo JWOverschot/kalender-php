@@ -2,7 +2,7 @@
     setlocale(LC_TIME, 'Dutch_Netherlands', 'Dutch', 'nl_NL', 'nl', 'nl_NL.ISO8859-1', 'nl_NL.UTF-8', 'nld_nld', 'nld', 'nld_NLD', 'NL_nl');
     foreach ($birthdays as $birthday) {
     $monthNum  = $birthday['birthday_month'];
-    $monthName = strftime("%B", mktime(0, 0, 0, $monthNum));
+    $monthName = strftime("%B", mktime(0, 0, 0, $monthNum, 10));
 ?>
     <h1><?= $monthName ?></h1>
     <h2><?= $birthday['birthday_day']; ?></h2>
