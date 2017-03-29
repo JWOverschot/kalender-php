@@ -2,6 +2,6 @@
 <html>
 	<head>
 		<title>Verjaardagskalender</title>
-        <link href="./css/main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="<?= URL . '/public/css/main.css' ?>">
 	</head>
 	<body>
