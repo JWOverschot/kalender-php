@@ -18,12 +18,19 @@ function createSave()
 	}
 	header("Location:" . URL . "birthday/index");
 }
-function edit()
+function edit($id)
 {
+	render("birthday/edit", array(
+		'birthday' => getBirthday($id)
+	));
 }
 function editSave()
 {
-	
+	if (!editBirthday()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
+	header("Location:" . URL . "birthday/index");
 } 
 function delete($id)
 {
