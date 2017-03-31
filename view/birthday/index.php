@@ -7,8 +7,9 @@
     <h1><?= $monthName ?></h1>
     <h2><?= $birthday['birthday_day']; ?></h2>
     <p>
-        <a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>"><?= $birthday['birthday_person']; ?> (<?= $birthday['birthday_year']; ?>)</a>
+        <a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>"><?= $birthday['birthday_name']; ?> <?= $birthday['birthday_surname']; ?> (<?= $birthday['birthday_year']; ?>)</a>
         <a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">x</a>
     </p>
+    <p><small><?= $birthday['birthday_description'] ?></small></p>
 <?php } ?>
 <p><a href="<?= URL ?>birthday/create">+ Toevoegen</a></p></div>
