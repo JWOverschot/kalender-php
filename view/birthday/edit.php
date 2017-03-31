@@ -3,11 +3,15 @@
     $year = $birthday['birthday_year'];
     $month = $birthday['birthday_month'];
     $day = $birthday['birthday_day'];
-
-    for ($i=1; $i < 3; $i++) { 
-        if (strlen($year) == $i) {
-            $year = '000' . $year;
-        }
+    
+    if (strlen($year) == 1) {
+        $year = '000' . $year;
+    }
+    elseif (strlen($year) == 2) {
+        $year = '00' . $year;
+    }
+    elseif (strlen($year) == 3) {
+        $year = '0' . $year;
     }
     if (strlen($month) == 1) {
         $month = '0' . $month;
