@@ -28,6 +28,11 @@ h1 {
   color: #666;
 }
 
+h1 b {
+  text-align: center;
+  display: block;
+}
+
 h2 {
   font-family: Open Sans Condensed, sans-serif;
   font-weight: normal;

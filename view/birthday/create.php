@@ -1,9 +1,24 @@
 <div class="container">
-	<form action="<?= URL ?>birthday/createSave" method="post">
-		<input type="date" name="date">
-		<input type="text" name="name" placeholder="Naam">
-		<input type="text" name="surname" placeholder="Achternaam">
-		<textarea name="description" placeholder="Description" maxlength="500"></textarea>
-		<input type="submit" value="Toevoegen">
-	</form>
+	<h1>Toevoegen</h1>
+	<div class="row">
+		<form class="col s12" action="<?= URL ?>birthday/createSave" method="post">
+			<div class="input-field col s6">
+	          <input id="name" type="text" name="name">
+	          <label for="name">Naam</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="surname" type="text" name="surname">
+	          <label for="surname">Achternaam</label>
+	        </div>
+	        <div class="input-field col s12">  
+				<input type="date" placeholder="dd-mm-jjjj" class="datepicker" name="date">
+			</div>
+			<div class="input-field col s12">
+				<textarea id="description" class="materialize-textarea" name="description" maxlength="500" data-length="500"></textarea>
+				<label for="description">Beschrijving</label>
+			</div>
+			<input class="waves-effect waves-light btn" type="submit" value="Toevoegen">
+			<a class="waves-effect waves-light btn grey" href="<?= URL ?>birthday/index">Annuleer</a>
+		</form>
+	<div class="row">
 </div>
