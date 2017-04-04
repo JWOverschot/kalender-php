@@ -11,7 +11,7 @@
 	          <label for="surname">Achternaam</label>
 	        </div>
 	        <div class="input-field col s12">  
-				<input type="date" placeholder="dd-mm-jjjj" class="datepicker" name="date">
+				<input type="date" placeholder="jjjj-mm-dd" class="datepicker" name="date">
 			</div>
 			<div class="input-field col s12">
 				<textarea id="description" class="materialize-textarea" name="description" maxlength="500" data-length="500"></textarea>
@@ -20,5 +20,4 @@
 			<input class="waves-effect waves-light btn" type="submit" value="Toevoegen">
 			<a class="waves-effect waves-light btn grey" href="<?= URL ?>birthday/index">Annuleer</a>
 		</form>
-	<div class="row">
 </div>

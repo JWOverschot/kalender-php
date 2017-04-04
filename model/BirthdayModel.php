@@ -23,7 +23,7 @@ function editBirthday() {
 	$surname = isset($_POST['surname']) ? $_POST['surname'] : null;
 	$description = isset($_POST['description']) ? $_POST['description'] : null;
 	$id = isset($_POST['id']) ? $_POST['id'] : null;
-	list($day, $month, $year) = explode('-', $date);
+	list($year, $month, $day) = explode('-', $date);
 	
 	if (strlen($month) == 0 && strlen($day) == 0 && strlen($name) == 0 && strlen($surname) == 0 && strlen($year) == 0 && strlen($description) == 0) {
 		return false;
@@ -64,7 +64,7 @@ function createBirthday() {
 	$surname = isset($_POST['surname']) ? $_POST['surname'] : null;
 	$description = isset($_POST['description']) ? $_POST['description'] : null;
 	
-	list($day, $month, $year) = explode('-', $date);
+	list($year, $month, $day) = explode('-', $date);
 
 	if (strlen($month) == 0 && strlen($day) == 0 && strlen($name) == 0 && strlen($surname) == 0 && strlen($year) == 0 && strlen($description) == 0) {
 		return false;

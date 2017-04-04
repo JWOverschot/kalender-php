@@ -12,8 +12,8 @@
             <h4><?= $birthday['birthday_day']; ?></h4>
             <div class="row">
                 <div class="col s12 m3">
-                    <div class="card white darken-1">
-                        <div class="card-content black-text">
+                    <div class="card">
+                        <div class="card-content">
                             <p>
                                 <a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>"><?= $birthday['birthday_name']; ?> <?= $birthday['birthday_surname']; ?> (<?= $birthday['birthday_year']; ?>)
                                 </a>

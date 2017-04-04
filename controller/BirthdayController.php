@@ -40,3 +40,12 @@ function delete($id)
 	}
 	header("Location:" . URL . "birthday/index");
 }
+function cookie() {
+	if ($_COOKIE["mode"] === "day") {
+        	setcookie("mode", "night", time() + (86400 * 30));
+        }
+        else {
+        	setcookie("mode", "day", time() + (86400 * 30));
+        }
+        header("Location:" . URL);
+}

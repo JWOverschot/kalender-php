@@ -22,7 +22,7 @@
         $year = '0' . $year;
     }
 
-    $date = $day . '-' . $month . '-' . $year;
+    $date = $year . '-' . $month . '-' . $day;
     ?>
     <div class="row">
         <form class="col s12" action="<?= URL ?>birthday/editSave" method="post">
@@ -35,18 +35,17 @@
               <label for="surname">Achternaam</label>
             </div>
             <div class="input-field col s12">  
-                <input type="date" placeholder="dd-mm-jjjj" class="datepicker" name="date" value="<?= $date ?>">
+                <input type="date" placeholder="jjjj-mm-dd" class="datepicker" name="date" value="<?= $date ?>">
             </div>
             <div class="input-field col s12">
                 <textarea id="description" class="materialize-textarea" name="description" maxlength="500" data-length="500"><?= $birthday['birthday_description']; ?></textarea>
                 <label for="description">Beschrijving</label>
             </div>
             <input type="hidden" name="id" value="<?= $birthday['birthday_id']; ?>">
-            <input class="waves-effect waves-light btn" type="submit" value="Toevoegen">
+            <input class="waves-effect waves-light btn" type="submit" value="Bijwerken">
             <a class="btn waves-effect waves-light red" href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">Verwijder
                 <i class="material-icons right">delete</i>
             </a>
             <a class="waves-effect waves-light btn grey" href="<?= URL ?>birthday/index">Annuleer</a>
         </form>
-    <div class="row">
-</div>  
+    </div>  
