@@ -9,7 +9,6 @@
 ?>
     <div class="container">
         <div class="divider"></div>
-        <div class="section">
             <h2>
                 <?php if ($currentMonth != $monthName) {
                     echo $monthName;
@@ -37,7 +36,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <?php } ?>
     <div class="fixed-action-btn horizontal">
